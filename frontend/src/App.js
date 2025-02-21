@@ -4,8 +4,6 @@ import StudentSignUp1 from './pages/StudentSignUp1';
 import RecruiterSignUp1 from './pages/RecruiterSignUp1';
 import Homepage from './pages/Homepage';
 import StudentSignUp2 from './pages/StudentSignUp2';
-
-
 const App = () => {
   return (
     <div>
@@ -17,9 +15,7 @@ const App = () => {
           <Route path="/StudentSignUp2" element={<StudentSignUp2/>}/>
         </Routes>
       </Router>
-      
     </div>
   )
 }
-
 export default App
