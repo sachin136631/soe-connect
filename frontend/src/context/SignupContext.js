@@ -5,7 +5,7 @@ export const SignupContext=createContext();
 export const SignupProvider=({children})=>{
     const [formData,setformData]=useState({
         name:"",
-        department:"",
+        branch:"",
         email:"",
         year:""
     });
