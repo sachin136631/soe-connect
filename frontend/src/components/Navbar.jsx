@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav>
         <ul>
             <li>
-                <Link to="/Post">Post</Link>
+                <Link to="/RecruiterHomepg">Post</Link>
             </li>
             <li>
                 <Link to="/QuickPost">Quick Post</Link>
@@ -19,4 +19,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;

@@ -8,7 +8,6 @@ import RecruiterSignUp2 from './pages/RecruiterSignUp2';
 import RecruiterHomepg from './pages/RecruiterHomepg';
 import StudentHomepg from './pages/StudentHomepg';
 import Navbar from './components/Navbar';
-import Post from './pages/Share';
 import QuickPost from './pages/QuickPost'
 import MyPost from './pages/MyPost';
 const App = () => {
@@ -24,7 +23,6 @@ const App = () => {
           <Route path="/RecruiterHomepg" element={<RecruiterHomepg/>}/>
           <Route path="/StudentHomepg" element={<StudentHomepg/>}/> 
           <Route path="/Navbar" element={<Navbar/>}/>
-          <Route path="/Post" element={<Post/>}/>
           <Route path="/QuickPost" element={<QuickPost/>}/>
           <Route path="/MyPost" element={<MyPost/>}/>
         </Routes>

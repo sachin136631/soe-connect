@@ -1,60 +1,68 @@
-import React, { useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { RecruiterSignUpContext } from '../context/RecruiterSignUpContext';
+import '../styles/RecruiterSignUp1.css'; 
 
 const RecruiterSignUp1 = () => {
-  const navigate=useNavigate();
-  const {formData,updateformdata}=useContext(RecruiterSignUpContext);
+  const navigate = useNavigate();
+  const { formData, updateformdata } = useContext(RecruiterSignUpContext);
 
-const handleChange=(e)=>{
-  const {id,value}=e.target;
-  updateformdata({
-    ...formData,
-    [id]:value
-  })
-}
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    updateformdata({
+      ...formData,
+      [id]: value,
+    });
+  };
 
-const handleSubmit=(e)=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
     navigate('/RecruiterSignUp2');
-}
+  };
+
   return (
-    <div>
-      <h1>create Recruiter account</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
+    <div className="recruiter-signup-container">
+      <h1 className="recruiter-signup-title">Create Recruiter Account</h1>
+      <form onSubmit={handleSubmit} className="recruiter-signup-form">
+        <div className="form-group">
           <input
-            type='text'
-            id='name'
+            type="text"
+            id="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder='enter the name'
+            placeholder="Enter your name"
+            className="form-input"
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <input
-            type='text'
-            id='organizationName'
+            type="text"
+            id="organizationName"
             value={formData.organizationName}
             onChange={handleChange}
-            placeholder='enter the name of the organization'
-             required
-          />
-        </div>
-        <div>
-          <input
-            type='text'
-            id='designation'
-            value={formData.designation}
-            onChange={handleChange}
-            placeholder='enter the designation'
+            placeholder="Enter the name of the organization"
+            className="form-input"
             required
           />
         </div>
-        <button type="submit">Next</button>
-      </form>     
+        <div className="form-group">
+          <input
+            type="text"
+            id="designation"
+            value={formData.designation}
+            onChange={handleChange}
+            placeholder="Enter your designation"
+            className="form-input"
+            required
+          />
+        </div>
+        <button type="submit" className="submit-button">
+          Next
+        </button>
+      </form>
     </div>
-  )
-}
-export default RecruiterSignUp1
+  );
+};
+
+export default RecruiterSignUp1;
