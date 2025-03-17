@@ -1,0 +1,88 @@
+.job-role{
+    width: 100%; /* Take up 100% of the container width */
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 10px; /* Rounded borders */
+    border: 1px solid #ccc; /* Border color */
+    outline: none;
+    transition: border-color 0.5s ease,background-color 0.5s ease;
+    background-color: #e5e3e3;
+}
+
+.job-role:hover{
+    border-color: black;
+    background-color: #ffffff;
+    cursor: text ;
+  }
+.jobe-role:focus{
+    background-color: white;
+    border-color: black;
+  }
+
+.bg1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #f5f5f5;
+}
+.heading-1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.Intern2 {
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+  width: 200px;
+  height: 40px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, scale 0.5s ease;
+}
+
+.Intern2.active {
+  background-color: #000000;
+  color: white;
+  border-color: transparent;
+  scale: 1.05;
+}
+
+.duration-output {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.duration-box{
+  padding-right: 400px;
+}
+
+.slider {
+  margin-top: 30px;
+  width: 100%;
+  height: 6px; 
+  accent-color: #000; 
+}
+
+  .post{
+    height: 50px;
+    width: 100px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    border-radius: 20px;
+    border-color: black;
+    background-color: white;
+    color: black;
+    transition: border-color ease-in-out 0.2s,background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+  }
+  .post:hover{
+    border-color: transparent;
+    background-color: black;
+    color: white;
+  }
