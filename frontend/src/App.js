@@ -10,6 +10,9 @@ import StudentHomepg from './pages/StudentHomepg';
 import Navbar from './components/Navbar';
 import QuickPost from './pages/QuickPost'
 import MyPost from './pages/MyPost';
+import Homepage from "./pages/Homepage/HomepageR"
+import Postpage from './pages/Postpage/PostpageR'
+import User from "./pages/Userprofile/UserR";
 const App = () => {
   return (
     <div>
@@ -25,9 +28,12 @@ const App = () => {
           <Route path="/Navbar" element={<Navbar/>}/>
           <Route path="/QuickPost" element={<QuickPost/>}/>
           <Route path="/MyPost" element={<MyPost/>}/>
+          <Route path="/postpage" element={<Postpage />} />
+          <Route path="/User" element={<User />} />
         </Routes>
       </Router>
     </div>
   )
 }
 export default App
+
