@@ -1,0 +1,115 @@
+/* RecruiterSignUp2.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #eaf3fc; /* Light blue background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container for the form */
+.recruiter-signup2-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Title above the form */
+.recruiter-signup2-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+/* Form Box */
+.recruiter-signup2-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.8s ease-in-out 0.3s forwards;
+}
+
+/* Form Inputs */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #b6d4fe;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeIn 0.6s ease-in-out 0.6s forwards;
+}
+
+.form-input:focus {
+  border-color: #5393fc;
+  outline: none;
+  box-shadow: 0 0 5px rgba(83, 147, 252, 0.5);
+}
+
+/* Submit Button */
+.submit-button {
+  background: #4c9efc;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.6s ease-in-out 0.8s forwards;
+}
+
+.submit-button:hover {
+  background: #2b8afc;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

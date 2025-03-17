@@ -1,0 +1,62 @@
+/* Homepage.css */
+.homepage-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f8cdda, #1c92d2);
+  font-family: "Poppins", sans-serif;
+}
+
+.homepage-content {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.homepage-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.homepage-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.homepage-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.homepage-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.applicant-button {
+  background: #ff7eb3;
+  color: white;
+}
+
+.recruiter-button {
+  background: #4db6ac;
+  color: white;
+}
+
+.homepage-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

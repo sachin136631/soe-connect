@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { SignupContext } from '../context/SignupContext';
 
@@ -39,10 +39,10 @@ const StudentSignUp1 = () => {
         <div>
             <input
                 type='text'
-                id='department'
+                id='branch'
                 value={formData.department}
                 onChange={handleChange}
-                placeholder='Enter the department'
+                placeholder='Enter the branch'
                 required
             />
         </div>
