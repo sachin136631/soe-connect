@@ -1,16 +1,50 @@
 import React, { useState } from 'react';
 import './postpageR.css';
+import axios from 'axios';
 
 const Postpage = () => {
   const [activeJobType, setActiveJobType] = useState(null);
   const [activeDurationType, setActiveDurationType] = useState(null);
   const [unit, setUnit] = useState('weeks');
   const [duration, setDuration] = useState(1);
-
+  const [moreInfo,setmoreInfo]=useState({
+    jobTitle:'',
+    branch:'',
+    link:'',
+  });
 
   const handleSliderChange = (e) => {
     setDuration(e.target.value);
   };
+
+
+  const handlepost=(e)=>{
+    const {id,value}=e.target;
+    setmoreInfo({
+      ...moreInfo,
+      [id]:value,
+    });
+  };
+
+  const submitter= async (e)=>{
+    try{
+      console.log("*********submitting job*******");
+      const response=await axios.post('http://localhost:5000/recruiter/posted',{
+        jobTitle:moreInfo.jobTitle,
+        jobType:activeJobType,
+        duration:duration,
+        unit:unit,
+        branch:moreInfo.branch,
+        link:moreInfo.link,
+      });
+      if(response.status===201){
+        alert("job posted successfully");
+        e.preventDefault();
+      }
+    }catch(error){
+      console.log("the error is ",error);
+    }
+  }
 
   return (
     <div>
@@ -19,10 +53,9 @@ const Postpage = () => {
           <div className="col-12">
             <div className="mb-5">
               <h1 className="heading-1">Job Role:</h1>
-              <input type="text" className="job-role" />
+              <input type="text" className="job-role" id="jobTitle" value={moreInfo.jobTitle} onChange={handlepost} />
             </div>
           </div>
-
           <div className="col-12 mb-5 d-flex flex-row justify-content-start">
             <div className="internship-box">
               <button
@@ -49,8 +82,7 @@ const Postpage = () => {
                   } else {
                     setActiveJobType('Placement');
                   }
-                }}
-                
+                }}               
               >
                 PLACEMENT
               </button>
@@ -72,13 +104,10 @@ const Postpage = () => {
                     setActiveDurationType('Weeks');
                     setUnit('weeks');
                   }
-                }}
-                
-                
+                }}                
               >
                 Weeks
               </button>
-
               <button
                 className={`Intern2 ${activeDurationType === 'Months' ? 'active' : ''}`}
                 onClick={() => {
@@ -89,13 +118,10 @@ const Postpage = () => {
                     setActiveDurationType('Months');
                     setUnit('months');
                   }
-                }}
-                
-                
+                }}                                
               >
                 Months
               </button>
-
               <button
                 className={`Intern2 ${activeDurationType === 'Years' ? 'active' : ''}`}
                 onClick={() => {
@@ -106,14 +132,11 @@ const Postpage = () => {
                     setActiveDurationType('Years');
                     setUnit('years');
                   }
-                }}
-                
+                }}                
               >
                 Years
               </button>
-
             </div>
-
             <input
               type="range"
               min={unit === 'weeks' ? 1 : unit === 'months' ? 1 : 1}
@@ -127,19 +150,17 @@ const Postpage = () => {
               {duration} {unit}
             </p>
           </div>
-
           <div className="fileupload col-12 mb-5">
             <div>
               <h1 className="heading-1">Upload JD:</h1>
               <input type="file" id="file" accept=".jpg, .png, .pdf" />
             </div>
           </div>
-
           <div className="col-12 branch mb-5">
             <div>
               <h1 className="heading-1">Branch:</h1>
-              <input type="text" className="job-role" list="branch-list" />
-              <datalist id="branch-list">
+              <input type="text" className="job-role" list="branch-list" id='branch' value={moreInfo.branch} onChange={handlepost}/>
+             <datalist id="branch-list">
                 <option value="Computer Science" />
                 <option value="Information Technology" />
                 <option value="Electronics and Communication" />
@@ -150,18 +171,16 @@ const Postpage = () => {
               </datalist>
             </div>
           </div>
-
           {/* ✅ Registration Link */}
           <div className="col-12 registration-link mb-5">
             <div>
               <h1 className="heading-1">Registration Link</h1>
-              <input type="text" className="job-role" />
+              <input type="text" className="job-role" id="link" value={moreInfo.link} onChange={handlepost}/>
             </div>
           </div>
-
           <div className="col-12">
             <div className="post-button">
-              <button className="post">POST</button>
+              <button className="post" type="submit" onClick={submitter}>POST</button>
             </div>
           </div>
         </div>
@@ -169,5 +188,4 @@ const Postpage = () => {
     </div>
   );
 };
-
 export default Postpage;

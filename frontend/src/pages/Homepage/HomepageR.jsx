@@ -5,18 +5,18 @@ import './homestyleR.css';
 const jobs = [
   { id: 1, title: "Data Scientist", type: "Placement", duration: "12 months", pdf: "data_scientist.pdf", registration: "https://example.com/register-data-scientist" },
   { id: 2, title: "Cybersecurity Analyst", type: "Internship", duration: "6 months", pdf: "", registration: "https://example.com/register-cybersecurity" },
-  { id: 3, title: "Blockchain Developer", type: "Placement", duration: "9 months", pdf: "blockchain_dev.pdf", registration: "https://example.com/register-blockchain" },
-  { id: 4, title: "Mobile App Developer", type: "Internship", duration: "4 months", pdf: "", registration: "https://example.com/register-mobile-dev" },
-  { id: 5, title: "AI/ML Engineer", type: "Placement", duration: "12 months", pdf: "ai_ml_engineer.pdf", registration: "https://example.com/register-ai-ml" },
-  { id: 6, title: "Cloud Solutions Architect", type: "Internship", duration: "6 months", pdf: "", registration: "https://example.com/register-cloud-architect" },
-  { id: 7, title: "Full Stack Developer", type: "Placement", duration: "10 months", pdf: "full_stack_dev.pdf", registration: "https://example.com/register-full-stack" },
-  { id: 8, title: "UX/UI Designer", type: "Internship", duration: "5 months", pdf: "ux_ui.pdf", registration: "https://example.com/register-ux-ui" },
-  { id: 9, title: "IT Support Specialist", type: "Placement", duration: "8 months", pdf: "", registration: "https://example.com/register-it-support" },
-  { id: 10, title: "DevOps Engineer", type: "Internship", duration: "6 months", pdf: "devops.pdf", registration: "https://example.com/register-devops" },
-  { id: 11, title: "Game Developer", type: "Internship", duration: "3 months", pdf: "", registration: "https://example.com/register-game-dev" },
-  { id: 12, title: "System Administrator", type: "Placement", duration: "9 months", pdf: "sys_admin.pdf", registration: "https://example.com/register-sys-admin" },
-  { id: 13, title: "Network Engineer", type: "Internship", duration: "6 months", pdf: "network_engineer.pdf", registration: "https://example.com/register-network" },
-  { id: 14, title: "Product Manager", type: "Placement", duration: "12 months", pdf: "", registration: "https://example.com/register-product-manager" },
+  // { id: 3, title: "Blockchain Developer", type: "Placement", duration: "9 months", pdf: "blockchain_dev.pdf", registration: "https://example.com/register-blockchain" },
+  // { id: 4, title: "Mobile App Developer", type: "Internship", duration: "4 months", pdf: "", registration: "https://example.com/register-mobile-dev" },
+  // { id: 5, title: "AI/ML Engineer", type: "Placement", duration: "12 months", pdf: "ai_ml_engineer.pdf", registration: "https://example.com/register-ai-ml" },
+  // { id: 6, title: "Cloud Solutions Architect", type: "Internship", duration: "6 months", pdf: "", registration: "https://example.com/register-cloud-architect" },
+  // { id: 7, title: "Full Stack Developer", type: "Placement", duration: "10 months", pdf: "full_stack_dev.pdf", registration: "https://example.com/register-full-stack" },
+  // { id: 8, title: "UX/UI Designer", type: "Internship", duration: "5 months", pdf: "ux_ui.pdf", registration: "https://example.com/register-ux-ui" },
+  // { id: 9, title: "IT Support Specialist", type: "Placement", duration: "8 months", pdf: "", registration: "https://example.com/register-it-support" },
+  // { id: 10, title: "DevOps Engineer", type: "Internship", duration: "6 months", pdf: "devops.pdf", registration: "https://example.com/register-devops" },
+  // { id: 11, title: "Game Developer", type: "Internship", duration: "3 months", pdf: "", registration: "https://example.com/register-game-dev" },
+  // { id: 12, title: "System Administrator", type: "Placement", duration: "9 months", pdf: "sys_admin.pdf", registration: "https://example.com/register-sys-admin" },
+  // { id: 13, title: "Network Engineer", type: "Internship", duration: "6 months", pdf: "network_engineer.pdf", registration: "https://example.com/register-network" },
+  // { id: 14, title: "Product Manager", type: "Placement", duration: "12 months", pdf: "", registration: "https://example.com/register-product-manager" },
 ];
 
 
@@ -36,9 +36,9 @@ const Homepage = () => {
 
   return (
     <div className='back'>
-      <Link to="/postpage">
+      {/* <Link to="/postpage">
         <img src="plus.png" alt="" className="plus" />
-      </Link>
+      </Link> */}
 
       <div className="navbar">
         <img src="K-removebg-preview.png" alt="Logo" className="size pt-5 m-auto" />

@@ -36,6 +36,7 @@ const StudentSignUp2 = () => {
       if(response.status===201){
         console.log(response);
         alert("student account created successfully");
+        navigate("/Homepage");
       }
     }catch(error){
       console.log("the error in creating student account is ",error);

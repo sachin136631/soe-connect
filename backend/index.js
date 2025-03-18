@@ -1,5 +1,4 @@
 import express from "express";
-import axios from "axios";
 import cors from "cors";
 import dotenv from "dotenv";
 import { MongoClient } from 'mongodb';
@@ -44,6 +43,19 @@ app.post("/signup/student",async(req,res)=>{
         res.status(201).json({message:"student account created successfully",data:result2});
     }catch(error){
         console.log("***",error,"***");
+    }
+});
+
+app.post("/recruiter/posted",async(req,res)=>{
+    try{
+        const {jobTitle,jobType,duration,unit,branch,link}=req.body;
+        const jobCollection=db.collection("job");
+        const result3=await jobCollection.insertOne({
+          jobTitle,jobType,duration,unit,branch,link,
+        });
+        res.status(201).json({message:"job posted successfully",data:result3})
+    }catch(error){
+        console.log("****",error,"****");
     }
 });
     

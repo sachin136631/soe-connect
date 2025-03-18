@@ -24,7 +24,7 @@ const RecruiterSignUp2 = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (form3.password !== form3.confirmpassword) {
-      alert('The passwords do not match');
+      alert('the passwords do not match');
     } else {
       try {
         console.log('Submitting recruiter data');
@@ -38,7 +38,7 @@ const RecruiterSignUp2 = () => {
         if (response.status === 201) {
           console.log(response);
           alert('Recruiter account created successfully');
-          navigate('/RecruiterHomepg');
+          navigate('/postpage');
         }
       } catch (error) {
         console.log('The error is ', error);

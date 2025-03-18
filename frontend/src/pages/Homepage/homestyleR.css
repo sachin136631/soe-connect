@@ -17,7 +17,7 @@
 }
 
 .bg{
-  background-image: url('C:\Users\rohit\OneDrive\Desktop\soe-connect\frontend\public\blue background.jpg');
+  background-image: url('../../../public/blue\ background.jpg');
   background-size: cover;
   height: 100vh;
 }
