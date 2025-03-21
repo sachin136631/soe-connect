@@ -1,9 +1,9 @@
 import React from 'react'
 import {BrowserRouter as Router,Route,Routes} from "react-router-dom";
-import StudentSignUp1 from './pages/StudentSignUp1';
-import RecruiterSignUp1 from './pages/RecruiterSignUp1';
-import Homepage from './pages/Homepage';
-import StudentSignUp2 from './pages/StudentSignUp2';
+import StudentSignUp1 from './pages/StudentSignUp1A';
+import RecruiterSignUp1 from './pages/RecruiterSignUp1A';
+import Homepage from './pages/HomepageA';
+import StudentSignUp2 from './pages/StudentSignUp2A';
 const App = () => {
   return (
     <div>
