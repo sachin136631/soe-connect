@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SignupContext } from '../context/SignupContext';
+import './styles/StudentSignup1.css'; // Import the separate CSS file
 
 const StudentSignUp1 = () => {
   const navigate = useNavigate();

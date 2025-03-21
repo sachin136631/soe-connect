@@ -1,0 +1,77 @@
+/* Full-page background styling */
+.signup-page {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    background-color: #4361ee; /* Blue background color */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container styling */
+  .signup-container {
+    background-color: #ffffff; /* White background for the container */
+    padding: 2rem; /* Add padding inside the container */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center-align text and buttons */
+    max-width: 400px; /* Limit the width of the container */
+    width: 100%; /* Ensure responsiveness */
+  }
+  
+  /* Title styling */
+  .signup-title {
+    font-size: 1.75rem; /* Larger font size for the title */
+    color: #333333; /* Dark gray color for contrast */
+    margin-bottom: 1.5rem; /* Add spacing below the title */
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 1rem; /* Add spacing between form fields */
+  }
+  
+  /* Label styling */
+  .form-label {
+    font-size: 1rem; /* Standard font size for labels */
+    color: #555555; /* Light gray color for labels */
+    display: block; /* Make labels block-level */
+    margin-bottom: 0.5rem; /* Add spacing between label and input */
+  }
+  
+  /* Input field styling */
+  .form-control {
+    width: 100%; /* Full width of the container */
+    padding: 0.75rem; /* Add padding inside the input */
+    font-size: 1rem; /* Standard font size for inputs */
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    transition: border-color 0.3s ease; /* Smooth focus effect */
+  }
+  
+  /* Input field focus state */
+  .form-control:focus {
+    border-color: #4361ee; /* Match the page's blue color on focus */
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 4px rgba(67, 97, 238, 0.5); /* Add a subtle glow */
+  }
+  
+  /* Submit button styling */
+  .btn-submit {
+    display: block; /* Make the button block-level */
+    width: 100%; /* Full width of the container */
+    padding: 1rem; /* Add padding inside the button */
+    font-size: 1rem; /* Standard font size for buttons */
+    color: #ffffff; /* White text color */
+    background-color: #4361ee; /* Match the page's blue color */
+    border: none; /* Remove borders */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Submit button hover effect */
+  .btn-submit:hover {
+    background-color: #3751b9; /* Darker blue on hover */
+  }
