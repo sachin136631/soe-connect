@@ -4,6 +4,8 @@ import StudentSignUp1 from './pages/StudentSignUp1A';
 import RecruiterSignUp1 from './pages/RecruiterSignUp1A';
 import Homepage from './pages/HomepageA';
 import StudentSignUp2 from './pages/StudentSignUp2A';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const App = () => {
   return (
     <div>

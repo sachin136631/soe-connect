@@ -1,0 +1,52 @@
+/* Set the background color of the entire page */
+.homepage {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    background-color: #0d6efd; /* Blue background color */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the container */
+  .container-custom {
+    background-color: #ffffff; /* White background for the container */
+    padding: 2rem; /* Add padding inside the container */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center-align text and buttons */
+    max-width: 400px; /* Limit the width of the container */
+    width: 100%; /* Ensure responsiveness */
+  }
+  
+  /* Style the header */
+  .header h1 {
+    font-size: 2rem; /* Larger font size for the title */
+    color: #333333; /* Dark gray color for contrast */
+    margin-bottom: 1.5rem; /* Add spacing below the title */
+  }
+  
+  /* Style the button container */
+  .button-container {
+    margin-bottom: 1rem; /* Add spacing between buttons */
+  }
+  
+  /* Style the buttons */
+  button {
+    display: block; /* Make buttons block-level for full width */
+    width: 100%; /* Full width of the container */
+    padding: 1rem; /* Add padding inside the buttons */
+    font-size: 1rem; /* Increase font size for better readability */
+    color: #ffffff; /* White text color */
+    background-color: #0d6efd; /* Match the page's blue color */
+    border: none; /* Remove borders */
+    border-radius: 8px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Hover effect for buttons */
+  button:hover {
+    background-color: #0b5ed7; /* Darker blue on hover */
+  }
