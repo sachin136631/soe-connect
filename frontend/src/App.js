@@ -8,6 +8,8 @@ import RecruiterSignUp2 from './pages/RecruiterSignUp2';
 import Homepage from "./pages/Homepage/HomepageR"
 import Postpage from './pages/Postpage/PostpageR'
 import User from "./pages/Userprofile/UserR";
+import StudentLoginPage from './pages/StudentLoginPage/StudentLoginPage';
+import RecruiterLoginPage from './pages/RecruiterLoginPage/RecruiterLoginPage';
 const App = () => {
   return (
     <div>
@@ -21,6 +23,8 @@ const App = () => {
           <Route path="/Homepage" element={<Homepage/>}/>
           <Route path="/postpage" element={<Postpage />} />
           <Route path="/User" element={<User />} />
+          <Route path="/StudentLoginPage" element={<StudentLoginPage/>}/>
+          <Route path="/RecruiterLoginPage" element={<RecruiterLoginPage/>}/>
         </Routes>
       </Router>
     </div>
