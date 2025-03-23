@@ -1,7 +1,7 @@
 .big-background{
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image:url(C:\Users\rohit\OneDrive\Desktop\soe-connect\frontend\public\blue-bg-aesthetic.webp);
+  background-image:url("../..");
   background-size: cover;
 }
 
