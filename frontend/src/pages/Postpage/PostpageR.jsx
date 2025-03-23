@@ -7,48 +7,57 @@ const Postpage = () => {
   const [activeDurationType, setActiveDurationType] = useState(null);
   const [unit, setUnit] = useState('weeks');
   const [duration, setDuration] = useState(1);
-  const [moreInfo,setmoreInfo]=useState({
-    jobTitle:'',
-    branch:'',
-    link:'',
+  const [moreInfo, setMoreInfo] = useState({
+    jobTitle: '',
+    branches: [],
+    link: '',
   });
 
   const handleSliderChange = (e) => {
     setDuration(e.target.value);
   };
 
-
-  const handlepost=(e)=>{
-    const {id,value}=e.target;
-    setmoreInfo({
+  const handlepost = (e) => {
+    const { id, value } = e.target;
+    setMoreInfo({
       ...moreInfo,
-      [id]:value,
+      [id]: value,
     });
   };
 
-  const submitter= async (e)=>{
-    try{
+  const handleBranchChange = (e) => {
+    const { value, checked } = e.target;
+    setMoreInfo((prev) => ({
+      ...prev,
+      branches: checked
+        ? [...prev.branches, value]
+        : prev.branches.filter((branch) => branch !== value),
+    }));
+  };
+
+  const submitter = async (e) => {
+    try {
       console.log("*********submitting job*******");
-      const response=await axios.post('http://localhost:5000/recruiter/posted',{
-        jobTitle:moreInfo.jobTitle,
-        jobType:activeJobType,
-        duration:duration,
-        unit:unit,
-        branch:moreInfo.branch,
-        link:moreInfo.link,
+      const response = await axios.post('http://localhost:5000/recruiter/posted', {
+        jobTitle: moreInfo.jobTitle,
+        jobType: activeJobType,
+        duration: duration,
+        unit: unit,
+        branches: moreInfo.branches,
+        link: moreInfo.link,
       });
-      if(response.status===201){
-        alert("job posted successfully");
+      if (response.status === 201) {
+        alert("Job posted successfully");
         e.preventDefault();
       }
-    }catch(error){
-      console.log("the error is ",error);
+    } catch (error) {
+      console.log("The error is ", error);
     }
-  }
+  };
 
   return (
-    <div>
-      <div className="container bg1">
+    <div className='big-background'>
+      <div className="container bg1 shadow-lg">
         <div className="row">
           <div className="col-12">
             <div className="mb-5">
@@ -157,20 +166,30 @@ const Postpage = () => {
             </div>
           </div>
           <div className="col-12 branch mb-5">
-            <div>
-              <h1 className="heading-1">Branch:</h1>
-              <input type="text" className="job-role" list="branch-list" id='branch' value={moreInfo.branch} onChange={handlepost}/>
-             <datalist id="branch-list">
-                <option value="Computer Science" />
-                <option value="Information Technology" />
-                <option value="Electronics and Communication" />
-                <option value="Electrical and Electronics" />
-                <option value="Fire and Safety" />
-                <option value="Mechanical Engineering" />
-                <option value="Civil Engineering" />
-              </datalist>
-            </div>
+            <h1 className="heading-1">Branch:</h1>
+              {[
+                "Computer Science",
+                "Information Technology",
+                "Electronics and Communication",
+                "Electrical and Electronics",
+                "Fire and Safety",
+                "Mechanical Engineering",
+                "Civil Engineering",
+              ].map((branch) => (
+                <div key={branch} className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    id={branch}
+                    value={branch}
+                    checked={moreInfo.branches.includes(branch)}
+                    onChange={handleBranchChange}
+                    className="w-5 h-5 text-green-500 accent-green-500 cursor-pointer custom-checkbox"
+                  />
+                  <label htmlFor={branch} className="text-lg custom-texts">{branch}</label>
+                </div>
+              ))}
           </div>
+
           {/* ✅ Registration Link */}
           <div className="col-12 registration-link mb-5">
             <div>
