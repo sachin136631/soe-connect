@@ -68,7 +68,7 @@ const Postpage = () => {
           <div className="col-12 mb-5 d-flex flex-row justify-content-start">
             <div className="internship-box">
               <button
-                className={`Intern m-2 ${activeJobType === 'Internship' ? 'active' : ''}`}
+                className={`Intern1 m-2 ${activeJobType === 'Internship' ? 'active' : ''}`}
                 onClick={() => {
                   if (activeJobType === 'Internship') {
                     setActiveJobType(null);
@@ -84,7 +84,7 @@ const Postpage = () => {
             </div>
             <div className="internship-box">
               <button
-                className={`Intern m-2 ${activeJobType === 'Placement' ? 'active' : ''}`}
+                className={`Intern1 m-2 ${activeJobType === 'Placement' ? 'active' : ''}`}
                 onClick={() => {
                   if (activeJobType === 'Placement') {
                     setActiveJobType(null);
