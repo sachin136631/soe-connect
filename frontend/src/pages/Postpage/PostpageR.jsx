@@ -56,6 +56,7 @@ const Postpage = () => {
   };
 
   return (
+
     <div className='big-background'>
       <div className="container bg1 shadow-lg">
         <div className="row">

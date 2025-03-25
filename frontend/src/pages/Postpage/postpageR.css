@@ -1,7 +1,7 @@
 .big-background{
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image:url('../../../public/blue-bg-aesthetic.webp');
+  background-image:url('../../../public/blue\ background.jpg'); 
   background-size: cover;
 }
 
@@ -111,7 +111,7 @@
   .branch input[type="checkbox"] {
     width: 18px;  /* Custom checkbox size */
     height: 18px;
-    accent-color: #0077ff; /* Change checkbox color */
+    accent-color: #0f0f0f; /* Change checkbox color */
     cursor: pointer;
   }
 .custom-texts{

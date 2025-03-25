@@ -20,6 +20,10 @@ const StudentLoginPage = () => {
     alert('Login Successful!');
   };
 
+  const Create=()=>{
+    console.log("*****poda patti ****");
+  }
+
   return (
     <>
       {/* Define the animations */}
@@ -148,6 +152,14 @@ const StudentLoginPage = () => {
                 style={{ animation: 'fadeIn 2s ease-out',backgroundColor:'black' }}
               >
                 LOGIN
+              </button>
+              <button
+                type="submit"
+                onClick={Create}
+                className="btn btn-primary py-3 rounded-pill btn-hover-effect"
+                style={{ animation: 'fadeIn 2s ease-out',backgroundColor:'black' }}
+              >
+                CREATE ACCOUNT
               </button>
             </div>
           </form>
