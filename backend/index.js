@@ -66,6 +66,42 @@ MongoClient.connect(MONGODB_URI)
                 res.status(500).json({ error: "Internal Server Error" });
             }
         });
+
+        app.post('/login/student',async(req,res)=>{
+            try{
+                const {email,password}=req.body;
+                const studentCollection=db.collection("student");
+                const user = await studentCollection.findOne({email:email});
+
+                if(!user){
+                    return res.status(400).json({message:"invalid email"});
+                }
+                if(password !== user.password){
+                    return res.status(400).json({ message: "Invalid email or password" });
+                }
+                res.status(201).json({ message: "Login successful", user });
+            } catch(error){
+                console.log(error);
+            }
+        });
+
+        app.post('/login/recruiter',async(req,res)=>{
+            try{
+                const {officialMailId,password}=req.body;
+                const studentCollection=db.collection("recruiters");
+                const user = await studentCollection.findOne({officialMailId});
+
+                if(!user){
+                    return res.status(400).json({message:"invalid email"});
+                }
+                if(password !== user.password){
+                    return res.status(400).json({ message: "Invalid email or password" });
+                }
+                res.status(201).json({ message: "Login successful", user });
+            } catch(error){
+                console.log(error);
+            }
+        });
         
         app.get('/',(req,res)=>{
             res.send("hello from hello");
