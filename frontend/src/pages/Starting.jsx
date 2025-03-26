@@ -102,14 +102,14 @@ const Starting = () => {
           <div className="mt-4">
             <button
               className="btn btn-primary w-100 py-3 rounded-pill mb-3 btn-hover-effect"
-              onClick={() => navigate("/StudentSignUp1")}
+              onClick={() => navigate("/StudentLoginPage")}
               style={{ animation: 'fadeIn 2s ease-out',backgroundColor:'black' }} // Delayed fade-in
             >
               Applicant
             </button>
             <button
               className="btn btn-primary w-100 py-3 rounded-pill btn-hover-effect"
-              onClick={() => navigate("/RecruiterSignup1")}
+              onClick={() => navigate("/RecruiterLoginPage")}
               style={{ animation: 'fadeIn 2.2s ease-out',backgroundColor:'black' }} // Slightly delayed fade-in
             >
               Recruiter

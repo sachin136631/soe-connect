@@ -1,7 +1,8 @@
 .big-background{
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image:url('../../../public/blue\ background.jpg'); 
+  /* background-image:url('../../../public/blue\ background.jpg');  */
+  background-color: #ffffff;
   background-size: cover;
 }
 

@@ -1,10 +1,32 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 const RecruiterLoginPage = () => {
+  const navigate = useNavigate();
   const [loginDetails, setLoginDetails] = useState({
     institutionMailId: '',
     password: '',
   });
+  const Create=()=>{
+    navigate("/RecruiterSignup1");
+  }
+
+  const login= async()=>{
+    try{
+      const response=await axios.post("http://localhost:5000/login/recruiter",{
+        officialMailId:loginDetails.institutionMailId,
+        password:loginDetails.password,
+    });
+    if(response.status===201){
+      console.log("hiii");
+      navigate("/postpage");
+    }
+  }
+    catch(error){
+      console.log(error);
+    }
+  }
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -14,11 +36,11 @@ const RecruiterLoginPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Login Details:', loginDetails);
-    alert('Login Successful!');
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log('Login Details:', loginDetails);
+  //   alert('Login Successful!');
+  // };
 
   return (
     <>
@@ -105,11 +127,11 @@ const RecruiterLoginPage = () => {
             Recruiter Login
           </h1>
 
-          <form onSubmit={handleSubmit}>
+          <form>
             {/* Institution Mail ID Field */}
             <div className="mb-3">
               <label htmlFor="institutionMailId" className="form-label" style={{ animation: 'fadeIn 1.2s ease-out' }}>
-                Institution Mail ID
+                Official Mail ID
               </label>
               <input
                 type="email"
@@ -145,9 +167,18 @@ const RecruiterLoginPage = () => {
               <button
                 type="submit"
                 className="btn btn-primary py-3 rounded-pill btn-hover-effect"
+                onClick={login}
                 style={{ animation: 'fadeIn 2s ease-out',backgroundColor:'black' }}
               >
                 LOGIN
+              </button>
+              <button
+                type="submit"
+                className="btn btn-primary py-3 rounded-pill btn-hover-effect"
+                onClick={Create}
+                style={{ animation: 'fadeIn 2s ease-out',backgroundColor:'black' }}
+              >
+                Create Account
               </button>
             </div>
           </form>

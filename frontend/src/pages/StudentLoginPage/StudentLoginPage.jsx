@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 const StudentLoginPage = () => {
+
+  const navigate = useNavigate();
   const [loginDetails, setLoginDetails] = useState({
     institutionMailId: '',
     password: '',
@@ -20,8 +23,24 @@ const StudentLoginPage = () => {
     alert('Login Successful!');
   };
 
-  const Create=()=>{
-    console.log("*****poda patti ****");
+  const Create=async()=>{
+    navigate("/StudentSignUp1");
+  }
+
+  const login= async()=>{
+    try{
+      const response=await axios.post("http://localhost:5000/login/student",{
+        email:loginDetails.institutionMailId,
+        password:loginDetails.password,
+    });
+    if(response.status===201){
+      console.log("hiii");
+      navigate("/Homepage");
+    }
+  }
+    catch(error){
+      console.log(error);
+    }
   }
 
   return (
@@ -109,7 +128,7 @@ const StudentLoginPage = () => {
             Student Login
           </h1>
 
-          <form onSubmit={handleSubmit}>
+          <form>
             {/* Institution Mail ID Field */}
             <div className="mb-3">
               <label htmlFor="institutionMailId" className="form-label" style={{ animation: 'fadeIn 1.2s ease-out' }}>
@@ -148,11 +167,13 @@ const StudentLoginPage = () => {
             <div className="d-grid mt-4">
               <button
                 type="submit"
+                onClick={login}
                 className="btn btn-primary py-3 rounded-pill btn-hover-effect"
                 style={{ animation: 'fadeIn 2s ease-out',backgroundColor:'black' }}
               >
                 LOGIN
               </button>
+
               <button
                 type="submit"
                 onClick={Create}
