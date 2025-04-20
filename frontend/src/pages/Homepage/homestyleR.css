@@ -1,3 +1,7 @@
+.back {
+  background-color: white;
+  padding-bottom: 200px;
+}
 
 .plus {
   height: 100px;
@@ -8,7 +12,7 @@
 }
 
 .para-1 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, sans-serif;
   color: white;
   font-weight: lighter;
 }
@@ -22,7 +26,6 @@
 .heading {
   margin-top: 30px;
   color: white;
-  font-family: 'Inhert', sans-serif;
   font-weight: bold;
   width: 650px;
   font-size: 55px;
@@ -70,7 +73,7 @@
 
 .search-container {
   width: 60vw;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
 }
 
 .search-bar {
@@ -84,17 +87,6 @@
   background-color: #e5e3e3;
 }
 
-.to-align {
-  margin-top: 90px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.background-gradient {
-  background-image: linear-gradient(to bottom, white, #abd3ff);
-}
-
 .search-bar:hover {
   border-color: black;
   background-color: #ffffff;
@@ -104,6 +96,44 @@
 .search-bar:focus {
   background-color: white;
   border-color: black;
+}
+
+.to-align {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.gradient-background {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(-45deg, #007bff, #8c00ff, #8400ff, #4c00ff);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glass-effect {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .internship-or-placement-div {
@@ -136,7 +166,7 @@
   background-color: #007bff;
   color: white;
   border-color: transparent;
-  transform: scale(1.05);
+  scale: 1.05;
 }
 
 .head {
@@ -144,7 +174,6 @@
   font-size: 23px;
 }
 
-/* Container for Job Listings */
 .width1 {
   width: 100vw;
   text-align: center;
@@ -154,35 +183,18 @@
   background-color: white;
   border-radius: 10px;
   padding: 15px;
-  height: auto;
-  transition: transform 0.2s ease;
+  height: 210px;
+  transition: scale 0.2s ease;
 }
 
 .job-post:hover {
-  transform: scale(1.06);
+  scale: 1.06;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.48);
 }
 
-/* Updated paragraph styling to allow wrapping */
 .para {
   color: rgb(114, 114, 114);
-  height: auto;        /* Allow paragraph to expand */
-  word-wrap: break-word;
-  white-space: normal;
-  margin-bottom: 5px;
-}
-
-/* This optional class ensures the branches list does not overflow the box;
-   you can adjust max-height or remove overflow if not needed */
-.branches-list {
-  max-height: 40px;
-  overflow: auto;
-}
-
-/* Container for job info to stack elements vertically */
-.job-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  height: 15px;
 }
 
 .background {
@@ -190,8 +202,12 @@
   border-radius: 20px;
   padding-left: 30px;
   padding-right: 30px;
-  background-color: #f2f2f2;
-  padding-top: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   margin-left: 10%;
   margin-right: 10%;
   padding-bottom: 60px;
@@ -200,7 +216,7 @@
 .view-more {
   font-family: "Inter", sans-serif;
   font-weight: bold;
-  border-width: 0;
+  border-width: 0px;
 }
 
 /* Modal Styling */
@@ -245,4 +261,36 @@
   cursor: pointer;
   margin-top: 10px;
   border-radius: 5px;
+}
+
+/* Dropdown styles */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 10;
+  padding: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdown-item {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dropdown-item input {
+  margin-right: 8px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
