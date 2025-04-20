@@ -3,6 +3,16 @@ import './postpageR.css';
 import axios from 'axios';
 
 const Postpage = () => {
+  const branchMap = {
+    "Computer Science": "CS",
+    "Information Technology": "IT",
+    "Electronics and Communication": "ECE",
+    "Electrical and Electronics": "EEE",
+    "Fire and Safety": "F&S",
+    "Mechanical Engineering": "ME",
+    "Civil Engineering": "CE",
+  };
+  
   const [activeJobType, setActiveJobType] = useState(null);
   const [activeDurationType, setActiveDurationType] = useState(null);
   const [unit, setUnit] = useState('weeks');
@@ -37,16 +47,18 @@ const Postpage = () => {
 
   const submitter = async (e) => {
     try {
+      const branchCodes = moreInfo.branches.map(branch => branchMap[branch]);
       console.log("*********submitting job*******");
       const response = await axios.post('http://localhost:5000/recruiter/posted', {
         jobTitle: moreInfo.jobTitle,
         jobType: activeJobType,
         duration: duration,
         unit: unit,
-        branches: moreInfo.branches,
+        branches: branchCodes,
         link: moreInfo.link,
       });
       if (response.status === 201) {
+        console.log(response.data);
         alert("Job posted successfully");
         e.preventDefault();
       }

@@ -112,7 +112,7 @@ const Starting = () => {
               onClick={() => navigate("/RecruiterLoginPage")}
               style={{ animation: 'fadeIn 2.2s ease-out',backgroundColor:'black' }} // Slightly delayed fade-in
             >
-              Recruiter
+              Announcer
             </button>
           </div>
         </div>

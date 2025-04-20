@@ -1,8 +1,5 @@
-.back{
-  background-color: white;
-  padding-bottom: 200px;
-}
-.plus{
+
+.plus {
   height: 100px;
   width: 100px;
   bottom: 100px;
@@ -10,19 +7,19 @@
   position: fixed;
 }
 
-.para-1{
+.para-1 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: white;
   font-weight: lighter;
 }
 
-.bg{
-  background-image: url('../../../public/blue\ background.jpg');
+.bg {
+  background-image: url('../../../public/blue background.jpg');
   background-size: cover;
   height: 100vh;
 }
 
-.heading{
+.heading {
   margin-top: 30px;
   color: white;
   font-family: 'Inhert', sans-serif;
@@ -31,135 +28,164 @@
   font-size: 55px;
 }
 
-.imag{
+.imag {
   width: 100vw;
   height: 50vh;
 }
 
-.size-1{
+.size-1 {
   width: 15%;
   position: relative;
   top: 40%;
   left: 42.5%;
 }
 
-.size{
-    width: 200px;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.size {
+  width: 200px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.size2{
-    width: 70px;
-    position: absolute;
-    border-radius: 35px;
-    box-shadow: 0px 0px 5px rgb(33, 33, 33);
-}
-.navbar{
-    position: relative; /* Allows absolute positioning inside */
-    width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: center; /* Centers second image horizontally */
-    align-items: center; /* Centers second image vertically */
-}
-.dp{
-    margin-left: 70%;
-}
-.search-container {
-    width: 60vw;
-    margin-bottom: 40px; 
-  }
-  
-  /* Styling for the search bar */
-  .search-bar {
-    width: 100%; /* Take up 100% of the container width */
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 25px; /* Rounded borders */
-    border: 1px solid #ccc; /* Border color */
-    outline: none;
-    transition: border-color 0.5s ease,background-color 0.5s ease;
-    background-color: #e5e3e3;
-  }
-  .to-align{
-    margin-top: 90px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
 
-.background-gradient{
+.size2 {
+  width: 70px;
+  position: absolute;
+  border-radius: 35px;
+  box-shadow: 0px 0px 5px rgb(33, 33, 33);
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dp {
+  margin-left: 70%;
+}
+
+.search-container {
+  width: 60vw;
+  margin-bottom: 40px; 
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.5s ease, background-color 0.5s ease;
+  background-color: #e5e3e3;
+}
+
+.to-align {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.background-gradient {
   background-image: linear-gradient(to bottom, white, #abd3ff);
 }
 
-  .search-bar:hover{
-    border-color: black;
-    background-color: #ffffff;
-    cursor: text ;
-  }
-  .search-bar:focus{
-    background-color: white;
-    border-color: black;
-  }
-  .internship-or-placement-div{
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .space-between{
-    width: 30%;
-    margin-top: 30px;
-  }
-  .Intern{
-    border-radius: 20px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #000000;
-    width: 200px;
-    height: 40px;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-    background-color: #ffffff;
-    color: #000000;
-    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, scale 0.5s ease ;
-  }
-  .Intern.active{
-    background-color: #007bff;;
-    color: white;
-    border-color: transparent;
-    scale: 1.05 ;
-  }
-.head{
+.search-bar:hover {
+  border-color: black;
+  background-color: #ffffff;
+  cursor: text;
+}
+
+.search-bar:focus {
+  background-color: white;
+  border-color: black;
+}
+
+.internship-or-placement-div {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.space-between {
+  width: 30%;
+  margin-top: 30px;
+}
+
+.Intern {
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #000000;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, scale 0.5s ease;
+}
+
+.Intern.active {
+  background-color: #007bff;
+  color: white;
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+.head {
   font-family: 'Inter', sans-serif;
   font-size: 23px;
 }
-.width1{
+
+/* Container for Job Listings */
+.width1 {
   width: 100vw;
   text-align: center;
 }
 
-.job-post{
+.job-post {
   background-color: white;
   border-radius: 10px;
   padding: 15px;
-  height: 210px;
-  transition: scale 0.2s ease;
-  
+  height: auto;
+  transition: transform 0.2s ease;
 }
 
-.job-post:hover{
-  scale: 1.06;
+.job-post:hover {
+  transform: scale(1.06);
 }
 
-
-.para{
+/* Updated paragraph styling to allow wrapping */
+.para {
   color: rgb(114, 114, 114);
-  height: 15px;
+  height: auto;        /* Allow paragraph to expand */
+  word-wrap: break-word;
+  white-space: normal;
+  margin-bottom: 5px;
 }
-.background{
+
+/* This optional class ensures the branches list does not overflow the box;
+   you can adjust max-height or remove overflow if not needed */
+.branches-list {
+  max-height: 40px;
+  overflow: auto;
+}
+
+/* Container for job info to stack elements vertically */
+.job-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.background {
   margin-top: 20px;
   border-radius: 20px;
   padding-left: 30px;
@@ -170,10 +196,11 @@
   margin-right: 10%;
   padding-bottom: 60px;
 }
-.view-more{
-  font-family: "Inter",sans-serif;
+
+.view-more {
+  font-family: "Inter", sans-serif;
   font-weight: bold;
-  border-width: 0px;
+  border-width: 0;
 }
 
 /* Modal Styling */
