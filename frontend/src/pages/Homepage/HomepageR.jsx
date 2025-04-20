@@ -34,7 +34,7 @@ useEffect(()=>{
   );
 
   return (
-    <div className='back'>
+    <div className='back gradient-background'>
       <div className="navbar">
         <img src="K-removebg-preview.png" alt="Logo" className="size pt-5 m-auto" />
         <Link to="/User" className="dp" href="#">
@@ -76,13 +76,13 @@ useEffect(()=>{
         </div>
 
         {/* Job Listings */}
-        <div className="background">
-          <div className="container-fluid">
+        <div className="background ">
+          <div className="container-fluid glass-effect">
             <div className="row">
               {filteredJobs.length > 0 ? (
                 filteredJobs.map(job => (
-                  <div key={job.id} className="col-12 col-md-6 col-lg-4">
-                    <div className="job-post mt-4">
+                  <div key={job.id} className=" col-12 col-md-6 col-lg-4">
+                    <div className="job-post mt-4 p-4">
                       <h1 className='head'>Job Title: <br /> {job.jobTitle}</h1>
                       <p className="para">Type: {job.jobType}</p>
                       <p className='para'>Duration: {job.duration} {job.unit}</p>

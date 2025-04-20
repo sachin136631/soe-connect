@@ -34,7 +34,7 @@
     padding-bottom: 50px;
     padding-left: 40px;
     padding-right: 40px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.783);
     backdrop-filter: blur(20px);
 }
 .heading-1{
@@ -137,4 +137,25 @@
   color: white;
   border-color: transparent;
   scale: 1.05 ;
+}
+.gradient-background {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(-45deg, #007bff, #8c00ff, #0062ff, #4c00ff);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

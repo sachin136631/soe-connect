@@ -6,7 +6,7 @@ const Postpage = () => {
   const [activeJobType, setActiveJobType] = useState(null);
   const [activeDurationType, setActiveDurationType] = useState(null);
   const [unit, setUnit] = useState('weeks');
-  const [duration, setDuration] = useState(1);
+  const [duration, setDuration] = useState(null);
   const [moreInfo, setMoreInfo] = useState({
     jobTitle: '',
     branches: [],
@@ -57,7 +57,7 @@ const Postpage = () => {
 
   return (
 
-    <div className='big-background'>
+    <div className='big-background gradient-background'>
       <div className="container bg1 shadow-lg">
         <div className="row">
           <div className="col-12">

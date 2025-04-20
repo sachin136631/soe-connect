@@ -90,9 +90,37 @@
     justify-content: center;
   }
 
-.background-gradient{
-  background-image: linear-gradient(to bottom, white, #abd3ff);
-}
+  .gradient-background {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(-45deg, #007bff, #8c00ff, #8400ff, #4c00ff);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .glass-effect {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Applies a blur effect to the background */
+    border-radius: 15px; /* Optional: rounds the corners of the div */
+    padding: 20px; /* Optional: adds padding inside the div */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: light border for definition */
+  }
+  
 
   .search-bar:hover{
     border-color: black;
@@ -152,6 +180,7 @@
 
 .job-post:hover{
   scale: 1.06;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.48);
 }
 
 
@@ -169,6 +198,12 @@
   margin-left: 10%;
   margin-right: 10%;
   padding-bottom: 60px;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Applies a blur effect to the background */
+  border-radius: 15px; /* Optional: rounds the corners of the div */
+  padding: 20px; /* Optional: adds padding inside the div */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: light border for definition */
 }
 .view-more{
   font-family: "Inter",sans-serif;
