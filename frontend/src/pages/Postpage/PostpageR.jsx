@@ -69,7 +69,7 @@ const Postpage = () => {
 
   return (
 
-    <div className='big-background'>
+    <div className='big-background gradient-background '>
       <div className="container bg1 shadow-lg">
         <div className="row">
           <div className="col-12">
