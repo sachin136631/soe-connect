@@ -138,10 +138,10 @@
   border-color: transparent;
   scale: 1.05 ;
 }
-.gradient-background {
+.gradient-background1 {
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(-45deg, #22009b, #001eff, #0062ff, #4c00ff);
+  background: linear-gradient(-45deg, #00a2b8, #008cd7, #2a94f7, #8dbdff);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   display: flex;

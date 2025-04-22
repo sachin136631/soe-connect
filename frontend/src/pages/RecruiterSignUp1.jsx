@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { RecruiterSignUpContext } from '../context/RecruiterSignUpContext';
-
+// gets data of announcer like name , organization name , designation and store it in context API of announcer
 const RecruiterSignUp1 = () => {
   const navigate = useNavigate();
   const { formData, updateformdata } = useContext(RecruiterSignUpContext);

@@ -17,17 +17,18 @@ const StudentLoginPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Login Details:', loginDetails);
-    alert('Login Successful!');
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log('Login Details:', loginDetails);
+  //   alert('Login Successful!');
+  // };
 
   const Create=async()=>{
     navigate("/StudentSignUp1");
   }
 
-  const login= async()=>{
+  const login= async(e)=>{
+    e.preventDefault();
     try{
       const response=await axios.post("http://localhost:5000/login/student",{
         email:loginDetails.institutionMailId,
@@ -125,7 +126,7 @@ const StudentLoginPage = () => {
               animation: 'fadeIn 1s ease-out', // Fade-in animation
             }}
           >
-            Student Login
+            Applicant Login
           </h1>
 
           <form>

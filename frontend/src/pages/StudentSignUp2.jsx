@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SignupContext } from '../context/SignupContext';
 import axios from "axios";
-
+// uses context api to to get data from signup1 and post it into mongodb database
 const StudentSignUp2 = () => {
   const navigate = useNavigate();
   const { formData } = useContext(SignupContext);

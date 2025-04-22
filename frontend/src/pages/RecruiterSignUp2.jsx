@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { RecruiterSignUpContext } from '../context/RecruiterSignUpContext';
 import axios from 'axios';
-
+// handles data from announcer signup 1 and post the acccount details of announcer to database
 const RecruiterSignUp2 = () => {
   const navigate = useNavigate();
   const { formData } = useContext(RecruiterSignUpContext);

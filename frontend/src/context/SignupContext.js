@@ -1,3 +1,4 @@
+// context api for student signup which stores data globally for easy navigation
 import { createContext,useState } from "react";
 
 export const SignupContext=createContext();

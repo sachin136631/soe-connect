@@ -81,7 +81,7 @@ MongoClient.connect(MONGODB_URI)
                         subject: `New Job Opportunity: ${jobTitle}`,
                         text: `Hello ${student.name},
 
-                    A new job has been posted!
+                    A new job has been posted in soe connect !
 
                     Job Title: ${jobTitle}
                     Type: ${jobType}

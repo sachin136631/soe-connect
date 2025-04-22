@@ -17,11 +17,11 @@
   font-weight: lighter;
 }
 
-.bg {
+/* .bg {
   background-image: url('../../../public/blue background.jpg');
   background-size: cover;
   height: 100vh;
-}
+} */
 
 .heading {
   margin-top: 30px;
@@ -52,10 +52,16 @@
 }
 
 .size2 {
-  width: 70px;
-  position: absolute;
-  border-radius: 35px;
-  box-shadow: 0px 0px 5px rgb(33, 33, 33);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #4c92f4, #95eae8); /* Warm gradient */
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(73, 144, 226, 0.3);
+  transition: all 0.3s ease;
 }
 
 .navbar {
@@ -105,10 +111,10 @@
   justify-content: center;
 }
 
-.gradient-background {
+.gradient-background{
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(-45deg, #007bff, #8c00ff, #8400ff, #4c00ff);
+  background: linear-gradient(-45deg, #3b65f0, #6fabff, #1979ff, #0059f1);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   display: flex;

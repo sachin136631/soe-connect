@@ -64,8 +64,8 @@ const Homepage = () => {
     <div className='back gradient-background'>
       <div className="navbar">
         <img src="K-removebg-preview.png" alt="Logo" className="size pt-5 m-auto" />
-        <Link to="/User" className="dp">
-          <img src="user.png" alt="User" className='size2' />
+        <Link to="/" className="dp">
+          <button className='size2 shadow-lg'>Log out</button>
         </Link>
       </div>
 

@@ -10,7 +10,7 @@ const StudentSignUp1 = () => {
     e.preventDefault();
     navigate("/StudentSignUp2");
   };
-
+  //handles student name , department , email and year submission.
   const handleChange = (e) => {
     const { id, value } = e.target;
     setformData({
