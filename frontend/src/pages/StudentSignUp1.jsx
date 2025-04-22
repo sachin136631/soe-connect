@@ -159,7 +159,7 @@ const StudentSignUp1 = () => {
             {/* Year Field */}
             <div className="mb-3">
               <label htmlFor="year" className="form-label" style={{ animation: 'fadeIn 2.4s ease-out' }}>
-                Year
+              Year of course completion
               </label>
               <input
                 type="number"
